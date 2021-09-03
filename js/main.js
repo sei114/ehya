@@ -78,20 +78,20 @@ $(document).ready(function () {
       errorClass: "invalid",
       messages: {
         name: {
-          required: "Please specify your name",
-          minlength: "The name must be at least 2 letters long",
+          required: "Укажите своё имя",
+          minlength: "Имя должно быть не короче 2 букв",
         },
         email: {
-          required: "Email is required",
-          email: "Your email address must be in the format of name@domain.com",
+          required: "Email обязателен",
+          email: "Email в формате name@domain.com",
         },
         emailOnly: {
-          required: "Email is required",
-          email: "Your email address must be in the format of name@domain.com",
+          required: "Email обязателен",
+          email: "Email в формате name@domain.com",
         },
         phone: {
-          required: "Phone number is required",
-          minlength: "Please enter at least 10 digits",
+          required: "Телефон обязателен",
+          minlength: "Введите не менее 10 цифр",
         },
       },
     });
