@@ -2,6 +2,13 @@
 @media (max-width: 1200px)
   .container
     max-width: 960px
+  .hero
+    &__button
+      &-wrapper
+        flex-direction: column
+        align-items: center
+    &__navigation
+      margin: 18px 0 0 0
   .grid
     &-wrapper
       flex-direction: column
@@ -10,16 +17,22 @@
   .top
     padding-top: 60px
     &-wrapper
+      flex-direction: row
+      justify-content: space-between
+      flex-wrap: wrap
       width: 748px
-  body
-    background-color: #f0deb9
+    &__hr
+      width: 700px
+      margin: 8px auto 0 auto
+  // body
+  //   background-color: #f0deb9
 
 /* small desktop */
 @media (max-width: 992px)
   .container,
   .unpublished-wrapper,
   .publishers-wrapper
-    max-width: 730px
+    max-width: 700px
   .navbar
     &-top, &-bottom
       &-menu
@@ -52,11 +65,17 @@
     &__button
       margin-top: 15px
       order: 99
+      &:hover
+        background-color: $light
+        color: $primary
   .hero
     &__button
       &:hover
         background-color: $primary
         color: $light
+      &-wrapper
+        flex-direction: row
+        align-items: flex-start
     &-wrapper
       flex-direction: column
     &__title, &__subtitle
@@ -68,12 +87,46 @@
       &-wrapper
         width: 100%
         margin-top: 56px
+    &__navigation
+      margin: 0 0 0 26px
+  .recommendations
+    &-wrapper
+      width: 100%
+    &__card
+      width: 340px
+    &__image
+      width: 126px
+    &__info
+      width: 166px
+    &__nav
+      &-button
+        &:hover
+          background-color: $primary-transparent
+          color: $primary
+  .top
+    &-wrapper
+      width: 100%
+    &__card
+      width: 340px
+      min-height: 208px
+    &__image
+      width: 106px
+    &__hr
+      width: 94%
+    &__nav
+      &-button
+        &:hover
+          background-color: transparent
+          color: $primary
   .card
     &__button
       &:hover
-        background-color: $dark
-  body
-    background-color: #1ab9ac
+        opacity: 1
+    &__like
+      &:hover
+        opacity: 1
+  // body
+  //   background-color: #1ab9ac
 
 /* tablet */
 @media (max-width: 768px)
@@ -141,8 +194,44 @@
       right: 0
       left: 0
       transform: translateY(-50%)
-  body
-    background-color: #92cf76
+  .recommendations
+    &__card
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      width: 250px
+      margin-bottom: 26px
+    &__image
+      width: 95px
+    &__info
+      align-items: center
+      width: 100%
+    &__title
+      margin-top: 24px
+      text-align: center
+    &__nav
+      &-button
+        margin-top: 24px
+  .top
+    &__card
+      width: 254px
+      min-height: 190px
+      padding: 18px 15px
+    &__image
+      width: 95px
+    &__info
+      width: 118px
+    &__title
+      font-size: 16px
+      line-height: 24px
+    &__genre
+      font-size: 14px
+      line-height: 20px
+    &__price
+      font-size: 20px
+      line-height: 24px
+  // body
+  //   background-color: #92cf76
 
 /* smartphone */
 @media (max-width: 576px)
@@ -175,13 +264,15 @@
       width: 176px
       min-height: 40px
       padding: 7px
-      margin-bottom: 15px
       &-wrapper
-        align-items: center
         flex-direction: column
+        align-items: center
         padding-top: 17px
+    &__navigation
+      margin: 15px 0 0 0
     &-book
       &-wrapper
+        min-height: 332px
         margin-top: 36px
       &__img
         width: 144px
@@ -189,12 +280,58 @@
     &-button
       width: 176px
       height: 40px
-      margin-left: 0 !important
       line-height: 22px
   .grid
     padding: 28px 0
-  body
-    background-color: #94bff3
+    &__card
+      width: 100%
+    &__title
+      text-align: center
+  .card
+    &__buy
+      margin-top: 20px
+  .recommendations
+    &-wrapper
+      margin-top: 70px
+      // &:nth-child(n+2)
+      //   display: none
+    &__card
+      display: none
+      margin-bottom: 0
+      padding: 32px 18px
+      &-1
+        display: flex
+    &__image
+      margin-top: -56px
+    &__title
+      margin-top: 19px
+    &__genre
+      margin-top: 12px
+    &__price
+      margin-top: 16px
+    &__nav
+      &-button
+        min-height: 48px
+  .top
+    padding-top: 56px
+    &__card
+      justify-content: space-around
+      min-height: 178px
+    &__info
+      width: 140px
+    &__title
+      font-weight: 700
+    &__price
+      margin-top: 12px
+    &__button
+      margin-top: 14px
+    &__hr
+      margin-top: 2px
+    &__nav
+      &-button
+        height: 60px
+  // body
+  //   background-color: #94bff3
 
 /* mobile */
 @media (max-width: 320px)
@@ -205,5 +342,34 @@
     &__dialog
       padding-left: 38px
       padding-right: 38px
-  body
-    background-color: #6a9755
+  .card
+    &__genre
+      font-size: 14px
+      line-height: 20px
+  .recommendations
+    &-wrapper
+      margin-top: 64px
+    &__title
+      font-size: 20px
+      line-height: 24px
+    &__price
+      font-size: 16px
+      line-height: 20px
+    &__button
+      width: 115px
+    &__nav
+      &-button
+        text-transform: none
+  .top
+    &-wrapper
+      margin-top: 36px
+      padding-top: 0
+    &__card
+      justify-content: space-between
+    &__info
+      width: 120px
+      margin: 0 auto 0 14px
+    &__hr
+      margin-top: 22px
+  // body
+  //   background-color: #6a9755

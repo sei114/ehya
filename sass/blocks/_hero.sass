@@ -1,5 +1,5 @@
 .hero
-  padding: 69px 0 50px 0
+  padding: 65px 0 50px 0
   &-wrapper
     display: flex
     justify-content: space-between
@@ -42,6 +42,8 @@
       display: flex
       padding: 56px 0 0 0
       // font-size: 0 /* убираем пробельные символы */
+  &__navigation
+    margin-left: 26px
   &__book
     margin: 0 0 0 16px
   &-book
@@ -50,8 +52,7 @@
       justify-content: center
       align-items: center
       width: 488px
-      height: 580px
-      // opacity: 0.1
+      min-height: 580px
       background-color: $secondary-transparent
 .navigation
   &-button
@@ -66,8 +67,8 @@
     font-weight: 700
     line-height: 25px
     &:hover
-      background-color: $primary
-      color: $light
+      background-color: $hover-primary-transparent
+      color: $hover-primary
   &-wrapper
     display: table
     width: 100%

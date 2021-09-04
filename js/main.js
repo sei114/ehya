@@ -111,10 +111,44 @@ $(document).ready(function () {
   }
 
   function animOff() {
-    document.querySelector(".footer__logo").removeAttribute("data-aos");
-    document.querySelector(".activities__card-1").removeAttribute("data-aos");
-    document.querySelector(".activities__card-2").removeAttribute("data-aos");
-    document.querySelector(".activities__card-3").removeAttribute("data-aos");
-    document.querySelector(".activities__card-4").removeAttribute("data-aos");
+    // document.querySelector(".footer__logo").removeAttribute("data-aos");
+    document.querySelector(".recommendations__card-1").removeAttribute("data-aos");
+    document.querySelector(".recommendations__card-2").removeAttribute("data-aos");
+    document.querySelector(".recommendations__card-3").removeAttribute("data-aos");
+    document.querySelector(".recommendations__card-4").removeAttribute("data-aos");
+    document.querySelector(".recommendations__card-5").removeAttribute("data-aos");
+    document.querySelector(".recommendations__card-6").removeAttribute("data-aos");
   }
+
+  /* Лайк (любо) */
+  // $(".card__like").on("click", function () {
+  //   // console.log("Клик по сердечку!");
+  //   $(".card__like").toggleClass("card__like--active");
+  // });
+
+  // $(".card__like").on("click", function () {
+  //   // console.log("Клик по сердечку!");
+  //   $(".card__like").setAttribute("src", "img/heart-active.svg");
+  // });
+
+  // function heartActive() {
+  //   // console.log("Клик по сердечку!");
+  //   document.querySelector(".card__like").setAttribute("src", "img/heart-active.svg");
+  // }
+
+  // document.querySelector(".card__like").addEventListener("click", heartActive());
+
+  // document.querySelector(".card__like").addEventListener("click", function () {
+  //   // console.log("Клик по сердечку!");
+  //   document.querySelector(".card__like").setAttribute("src", "img/heart-active.svg");
+  // });
+
+  // function heartActive(like) {
+  //   // console.log("Клик по сердечку!");
+  //   like.setAttribute("src", "img/heart-active.svg");
+  // }
+
+  // var heart = document.querySelector(".card__like");
+  // heart.addEventListener("click", heartActive(heart));
+  /* /Лайк (любо) */
 });

@@ -1,5 +1,5 @@
 .grid
-  padding: 50px 0 40px 0
+  padding: 52px 0 40px 0
   &__title
     margin: 0
     color: $dark
@@ -12,9 +12,6 @@
     justify-content: space-between
     // align-items: center
 .card
-  display: flex
-  justify-content: space-between
-  align-items: center
   &__info
     display: flex
     flex-direction: column
@@ -33,7 +30,6 @@
     font-weight: 400
     line-height: 22px
   &__price
-    margin-top: 24px
     color: $primary
     font-family: 'Roboto Condensed', sans-serif
     font-size: 20px
@@ -55,17 +51,26 @@
     font-weight: 700
     line-height: 22px
     &:hover
-      background-color: $hover-dark
+      opacity: 0.8
   &__like
     margin-left: 21px
+    &:hover
+      opacity: 0.8
+    // &--active
+    //   display: none
+    //   border: 1px solid red
+    //   border-radius: 9px
 .recommendations
   &-wrapper
     display: flex
     justify-content: space-between
     flex-wrap: wrap
     width: 748px
-    margin-top: 30px
+    margin-top: 28px
   &__card
+    display: flex
+    justify-content: space-between
+    align-items: center
     width: 358px
     min-height: 260px
     margin-bottom: 32px
@@ -76,27 +81,74 @@
       margin-bottom: 0
   &__image
     width: 160px
+    border-radius: 10px
   &__info
-    width: 156px
+    width: 154px
+  &__price
+    margin-top: 24px
+  &__nav
+    &-button
+      width: 100%
+      min-height: 72px
+      margin-top: 27px
+      border: none
+      background-color: $primary-transparent
+      color: $primary
+      font-family: 'Roboto Condensed', sans-serif
+      font-size: 16px
+      font-weight: 700
+      line-height: 20px
+      text-transform: uppercase
+      &:hover
+        background-color: $hover-primary-transparent
+        color: $hover-primary
 .top
   &-wrapper
     display: flex
-    justify-content: space-between
-    flex-wrap: wrap
+    flex-direction: column
+    align-items: center
     width: 360px
-    margin-top: 30px
+    margin-top: 28px
+    padding-top: 8px
     // border: 1px solid $secondary-transparent
     border-radius: 10px
     background-color: $secondary-transparent
   &__card
+    display: flex
+    justify-content: space-between
+    align-items: center
     width: 360px
-    min-height: 217px
+    min-height: 214px
     padding: 18px 24px
     // border: 1px solid $grey
     border-radius: 10px
   &__image
     width: 120px
+    border-radius: 6px
   &__info
     width: 166px
+  &__price
+    margin-top: 18px
   &__button
     margin-top: 22px
+  &__hr
+    width: 312px
+    height: 1px
+    margin: 8px 0 0 0
+    border: none
+    background-color: $grey
+  &__nav
+    &-button
+      width: 100%
+      height: 71px
+      // margin-top: 27px
+      border: none
+      background-color: transparent
+      color: $primary
+      font-family: 'Roboto Condensed', sans-serif
+      font-size: 16px
+      font-weight: 700
+      line-height: 20px
+      &:hover
+        background-color: $hover-secondary-transparent
+        color: $hover-primary
