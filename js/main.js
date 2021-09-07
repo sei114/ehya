@@ -1,22 +1,9 @@
 $(document).ready(function () {
-  const hotelSlider = new Swiper(".hotel-slider", {
+  /* Слайдер Swiperjs */
+
+  const reviewsSliderDesk = new Swiper(".reviews-slider--desktop", {
     // Optional parameters
-    loop: true,
-
-    // Navigation arrows
-    navigation: {
-      nextEl: ".hotel-slider__button--next",
-      prevEl: ".hotel-slider__button--prev",
-    },
-
-    // Мои параметры
-    effect: "fade",
-    speed: 800,
-  });
-
-  const reviewsSlider = new Swiper(".reviews-slider", {
-    // Optional parameters
-    loop: true,
+    // loop: true,
 
     // Navigation arrows
     navigation: {
@@ -27,8 +14,70 @@ $(document).ready(function () {
     // Мои параметры
     speed: 800,
     autoHeight: true,
-    spaceBetween: 80,
+    spaceBetween: 26,
+    watchOverflow: true,
+    slidesPerView: 4,
   });
+
+  const reviewsSliderMob = new Swiper(".reviews-slider--mobile", {
+    // Optional parameters
+    // loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".reviews-slider__button--next",
+      prevEl: ".reviews-slider__button--prev",
+    },
+
+    // Мои параметры
+    speed: 800,
+    autoHeight: true,
+    spaceBetween: 26,
+    watchOverflow: true,
+    slidesPerView: 4,
+  });
+
+  /* Слайдер Swiperjs. Делаем кнопки выходящими за пределы контейнера */
+  const swiperPrev = document.getElementById("reviews-slider__button--prev");
+  const swiperNext = document.getElementById("reviews-slider__button--next");
+
+  swiperPrev.addEventListener("click", () => {
+    Swiper.slidePrev();
+  });
+  swiperNext.addEventListener("click", () => {
+    Swiper.slideNext();
+  });
+  /* /Слайдер Swiperjs. Делаем кнопки выходящими за пределы контейнера */
+
+  /* Слайдер Swiperjs. Делаем кнопки исчезающими при достижении конца слайдера */
+  // reachEnd - событие достижения конца слайдера
+  // reachBeginning - событие достижения начала слайдера
+  // fromEdge - событие после достижения начала или конца слайдера
+
+  // swiperNext.addEventListener("Swiper.reachEnd()", () => {
+  //   console.log("Конец слайдера!");
+  // });
+
+  // Swiper.reachEnd(function () {
+  //   $(".reviews-slider__button--next").addClass("reviews-slider__button--next--hidden");
+  // });
+
+  /* /Слайдер Swiperjs. Делаем кнопки исчезающими при достижении конца слайдера */
+
+  /* Слайдер Swiperjs. Делаем мобильный вариант слайдера рабочим */
+  // function ReviewsSliderDesktop() {
+  //   $(".reviews-slider").removeClass("reviews-slider--desktop");
+  // }
+  // function ReviewsSliderMobile() {
+  //   $(".reviews-slider").addClass("reviews-slider--mobile");
+  // }
+
+  // if (window.matchMedia("(max-width: 1060px)").matches) {
+  //   ReviewsSliderDesktop();
+  //   ReviewsSliderMobile();
+  // }
+  /* /Слайдер Swiperjs. Делаем мобильный вариант слайдера рабочим */
+  /* /Слайдер Swiperjs */
 
   /* Мобильное меню на JS */
   /*
@@ -121,34 +170,14 @@ $(document).ready(function () {
   }
 
   /* Лайк (любо) */
-  // $(".card__like").on("click", function () {
-  //   // console.log("Клик по сердечку!");
-  //   $(".card__like").toggleClass("card__like--active");
+  /* 1ый вариант */
+  $(".card__like").click(function () {
+    $(this).attr("src", "img/heart-active.svg").fadeIn(500);
+  });
+
+  /* 2ой вариант */
+  // $('[src="img/heart.svg"]').click(function () {
+  //   $(this).attr("src", "img/heart-active.svg").fadeIn(500);
   // });
-
-  // $(".card__like").on("click", function () {
-  //   // console.log("Клик по сердечку!");
-  //   $(".card__like").setAttribute("src", "img/heart-active.svg");
-  // });
-
-  // function heartActive() {
-  //   // console.log("Клик по сердечку!");
-  //   document.querySelector(".card__like").setAttribute("src", "img/heart-active.svg");
-  // }
-
-  // document.querySelector(".card__like").addEventListener("click", heartActive());
-
-  // document.querySelector(".card__like").addEventListener("click", function () {
-  //   // console.log("Клик по сердечку!");
-  //   document.querySelector(".card__like").setAttribute("src", "img/heart-active.svg");
-  // });
-
-  // function heartActive(like) {
-  //   // console.log("Клик по сердечку!");
-  //   like.setAttribute("src", "img/heart-active.svg");
-  // }
-
-  // var heart = document.querySelector(".card__like");
-  // heart.addEventListener("click", heartActive(heart));
   /* /Лайк (любо) */
 });

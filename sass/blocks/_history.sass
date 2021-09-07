@@ -1,0 +1,73 @@
+.history
+  padding: 52px 0 50px
+  &__container
+    max-width: 1005px
+  // &-wrapper
+    // display: flex
+  &-text
+    &-wrapper
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+  &__title
+    width: 450px
+    margin: 0
+    color: $dark
+    font-family: 'Roboto Condensed', sans-serif
+    font-size: 48px
+    font-weight: 700
+    line-height: 60px
+  &__text
+    width: 382px
+    margin: 0 36px 0 0
+    color: $text-color
+    font-size: 18px
+    font-weight: 400
+    line-height: 32px
+  &-video
+    &-wrapper
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      width: 100%
+    &__info
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      flex-wrap: wrap
+      width: 100%
+      margin-top: 22px
+    &__title
+      margin: 0
+      color: $dark
+      font-family: 'Roboto', sans-serif
+      font-size: 22px
+      font-weight: 500
+      line-height: 32px
+    &__text
+      flex-basis: 100%
+      margin: 10px 0 0
+      font-size: 16px
+      font-weight: 400
+      line-height: 22px
+    &__icon
+      margin-top: 6px
+  &__video
+    width: 315px
+    margin-top: 28px
+    &:first-child
+      flex-basis: 100%
+      margin-top: 22px
+  &-images
+    position: relative
+    &__item
+      width: 100%
+    &__icon
+      width: 30px
+      position: absolute
+      top: 50%
+      left: 50%
+      // transform: translateX(-50%)
+      transform: translate(-50%, -50%)
+      &-1
+        width: 100px
