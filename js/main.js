@@ -7,8 +7,8 @@ $(document).ready(function () {
 
     // Navigation arrows
     navigation: {
-      nextEl: ".reviews-slider__button--next",
-      prevEl: ".reviews-slider__button--prev",
+      nextEl: ".reviews__button--next",
+      prevEl: ".reviews__button--prev",
     },
 
     // Мои параметры
@@ -18,6 +18,12 @@ $(document).ready(function () {
     spaceBetween: 20,
     autoHeight: true,
     watchOverflow: true,
+    on: {
+      init: function () {
+        console.log("swiper initialized");
+        $(".reviews__button--prev").addClass("reviews__button--prev--hidden");
+      },
+    },
 
     breakpoints: {
       // when window width is >= 320px
@@ -43,15 +49,83 @@ $(document).ready(function () {
     },
   });
 
+  const unpublishedSlider = new Swiper(".unpublished-slider", {
+    // Optional parameters
+    // loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".unpublished__button--next",
+      prevEl: ".unpublished__button--prev",
+    },
+
+    // Мои параметры
+    // effect: "fade",
+    speed: 800,
+    slidesPerView: 5,
+    spaceBetween: 30,
+    autoHeight: true,
+    watchOverflow: true,
+    on: {
+      init: function () {
+        console.log("swiper initialized");
+        $(".unpublished__button--prev").addClass("unpublished__button--prev--hidden");
+      },
+    },
+
+    breakpoints: {
+      // when window width is >= 320px
+      280: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      // when window width is >= 576px
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      // when window width is >= 1060px
+      1060: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      // when window width is >= 1240px
+      1240: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+    },
+  });
+
   /* Слайдер Swiperjs. Делаем кнопки выходящими за пределы контейнера */
-  const swiperPrev = document.getElementById("reviews-slider__button--prev");
-  const swiperNext = document.getElementById("reviews-slider__button--next");
+  const swiperPrev = document.getElementById("reviews__button--prev");
+  const swiperNext = document.getElementById("reviews__button--next");
 
   swiperPrev.addEventListener("click", () => {
-    Swiper.slidePrev();
+    reviewsSlider.slidePrev();
   });
   swiperNext.addEventListener("click", () => {
-    Swiper.slideNext();
+    reviewsSlider.slideNext();
+  });
+
+  const swiperPrevTwo = document.getElementById("unpublished__button--prev");
+  const swiperNextTwo = document.getElementById("unpublished__button--next");
+
+  swiperPrevTwo.addEventListener("click", () => {
+    unpublishedSlider.slidePrev();
+  });
+  swiperNextTwo.addEventListener("click", () => {
+    unpublishedSlider.slideNext();
   });
   /* /Слайдер Swiperjs. Делаем кнопки выходящими за пределы контейнера */
 
@@ -62,18 +136,31 @@ $(document).ready(function () {
 
   reviewsSlider.on("reachEnd", function () {
     // console.log("Конец слайдера");
-    $(".reviews-slider__button--next").addClass("reviews-slider__button--next--hidden");
+    $(".reviews__button--next").addClass("reviews__button--next--hidden");
   });
   reviewsSlider.on("reachBeginning", function () {
     // console.log("Начало слайдера");
-    $(".reviews-slider__button--prev").addClass("reviews-slider__button--prev--hidden");
+    $(".reviews__button--prev").addClass("reviews__button--prev--hidden");
   });
   reviewsSlider.on("fromEdge", function () {
     // console.log("Возврат из конечного положения слайдера");
-    $(".reviews-slider__button--next").removeClass("reviews-slider__button--next--hidden");
-    $(".reviews-slider__button--prev").removeClass("reviews-slider__button--prev--hidden");
+    $(".reviews__button--next").removeClass("reviews__button--next--hidden");
+    $(".reviews__button--prev").removeClass("reviews__button--prev--hidden");
   });
 
+  unpublishedSlider.on("reachEnd", function () {
+    // console.log("Конец слайдера");
+    $(".unpublished__button--next").addClass("unpublished__button--next--hidden");
+  });
+  unpublishedSlider.on("reachBeginning", function () {
+    // console.log("Начало слайдера");
+    $(".unpublished__button--prev").addClass("unpublished__button--prev--hidden");
+  });
+  unpublishedSlider.on("fromEdge", function () {
+    // console.log("Возврат из конечного положения слайдера");
+    $(".unpublished__button--next").removeClass("unpublished__button--next--hidden");
+    $(".unpublished__button--prev").removeClass("unpublished__button--prev--hidden");
+  });
   /* /Слайдер Swiperjs. Делаем кнопки исчезающими при достижении конца слайдера */
   /* /Слайдер Swiperjs */
 

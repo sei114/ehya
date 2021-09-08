@@ -487,23 +487,137 @@
           <!-- navigation buttons -->
         </div>
         <!-- /.reviews-slider -->
-        <div class="reviews-slider__buttons">
-          <button
-            class="reviews-slider__button reviews-slider__button--prev"
-            id="reviews-slider__button--prev"
-          ></button>
-          <button
-            class="reviews-slider__button reviews-slider__button--next"
-            id="reviews-slider__button--next"
-          ></button>
+        <div class="reviews-buttons reviews__buttons">
+          <button class="reviews-button reviews__button reviews__button--prev" id="reviews__button--prev"></button>
+          <button class="reviews-button reviews__button reviews__button--next" id="reviews__button--next"></button>
         </div>
       </div>
       <!-- /.container -->
     </div>
     <!-- /.reviews -->
     <section class="unpublished">
-      <div class="unpublished-wrapper"></div>
-      <!-- /.unpublished-wrapper -->
+      <div class="container">
+        <div class="unpublished-wrapper">
+          <h2 class="unpublished-title unpublished__title">Неизданные книги</h2>
+          <!-- Слайдер Swiperjs -->
+          <div class="swiper-container unpublished-slider">
+            <div class="swiper-wrapper unpublished-slider-wrapper">
+              <div class="swiper-slide">
+                <div class="unpublished-slide-cover">
+                  <div class="unpublished-slider__item">
+                    <img src="img/book-236-modernism.jpg" alt="Книга: Modernism" class="unpublished-slider__image" />
+                  </div>
+                  <!-- /.unpublished-slider__item -->
+                </div>
+                <!-- /.unpublished-slide-cover -->
+              </div>
+              <!-- /.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="unpublished-slide-cover">
+                  <div class="unpublished-slider__item">
+                    <img src="img/book-236-harms.jpg" alt="Книга: Kelly Harms" class="unpublished-slider__image" />
+                  </div>
+                  <!-- /.unpublished-slider__item -->
+                </div>
+                <!-- /.unpublished-slide-cover -->
+              </div>
+              <!-- /.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="unpublished-slide-cover">
+                  <div class="unpublished-slider__item">
+                    <img
+                      src="img/book-236-thurlow.jpg"
+                      alt="Книга: Clifford Thurlow"
+                      class="unpublished-slider__image"
+                    />
+                  </div>
+                  <!-- /.unpublished-slider__item -->
+                </div>
+                <!-- /.unpublished-slide-cover -->
+              </div>
+              <!-- /.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="unpublished-slide-cover">
+                  <div class="unpublished-slider__item">
+                    <img
+                      src="img/book-236-jason.jpg"
+                      alt="Книга: Jason Santa Maria"
+                      class="unpublished-slider__image"
+                    />
+                  </div>
+                  <!-- /.unpublished-slider__item -->
+                </div>
+                <!-- /.unpublished-slide-cover -->
+              </div>
+              <!-- /.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="unpublished-slide-cover">
+                  <div class="unpublished-slider__item">
+                    <img
+                      src="img/book-236-mackintosh.jpg"
+                      alt="Книга: Clare Mackintosh"
+                      class="unpublished-slider__image"
+                    />
+                  </div>
+                  <!-- /.unpublished-slider__item -->
+                </div>
+                <!-- /.unpublished-slide-cover -->
+              </div>
+              <!-- /.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="unpublished-slide-cover">
+                  <div class="unpublished-slider__item">
+                    <img src="img/book-236-modernism.jpg" alt="Книга: Modernism" class="unpublished-slider__image" />
+                  </div>
+                  <!-- /.unpublished-slider__item -->
+                </div>
+                <!-- /.unpublished-slide-cover -->
+              </div>
+              <!-- /.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="unpublished-slide-cover">
+                  <div class="unpublished-slider__item">
+                    <img src="img/book-236-harms.jpg" alt="Книга: Kelly Harms" class="unpublished-slider__image" />
+                  </div>
+                  <!-- /.unpublished-slider__item -->
+                </div>
+                <!-- /.unpublished-slide-cover -->
+              </div>
+              <!-- /.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="unpublished-slide-cover">
+                  <div class="unpublished-slider__item">
+                    <img
+                      src="img/book-236-thurlow.jpg"
+                      alt="Книга: Clifford Thurlow"
+                      class="unpublished-slider__image"
+                    />
+                  </div>
+                  <!-- /.unpublished-slider__item -->
+                </div>
+                <!-- /.unpublished-slide-cover -->
+              </div>
+              <!-- /.swiper-slide -->
+            </div>
+            <!-- /.swiper-wrapper -->
+
+            <!-- navigation buttons -->
+          </div>
+          <!-- /.unpublished-slider -->
+          <div class="unpublished-buttons unpublished__buttons">
+            <button
+              class="unpublished-button unpublished__button unpublished__button--prev"
+              id="unpublished__button--prev"
+            ></button>
+            <button
+              class="unpublished-button unpublished__button unpublished__button--next"
+              id="unpublished__button--next"
+            ></button>
+          </div>
+        </div>
+        <!-- /.unpublished-wrapper -->
+      </div>
+      <!-- /.container -->
     </section>
     <!-- /.unpublished -->
     <section class="history">
@@ -518,28 +632,40 @@
           </div>
           <div class="history-video-wrapper">
             <div class="history-video history__video history__video-1">
-              <a class="history-video__play" data-fancybox href="https://www.youtube.com/watch?v=40QldsoSzA4">
-                <div class="history-images">
-                  <img class="history-images__item" src="img/video-image-1.jpg" alt="Видео: карточка" />
-                  <img
-                    class="history-images__icon history-images__icon-1"
-                    src="img/icon-video-play-1.svg"
-                    alt="Иконка: проиграть видео"
-                  />
-                </div>
-              </a>
+              <div class="history-video-cover history-video__cover history-video__cover-1">
+                <a class="history-video__play" data-fancybox href="https://www.youtube.com/watch?v=40QldsoSzA4">
+                  <div class="history-images history-images-1">
+                    <img
+                      class="history-images__item history-images__item-1"
+                      src="img/video-image-1.jpg"
+                      alt="Видео: карточка"
+                    />
+                    <img
+                      class="history-images__icon history-images__icon-1"
+                      src="img/icon-video-play-1.svg"
+                      alt="Иконка: проиграть видео"
+                    />
+                  </div>
+                </a>
+              </div>
             </div>
             <div class="history-video history__video history__video-2">
-              <a class="history-video__play" data-fancybox href="https://www.youtube.com/watch?v=oOStAc0dCHM">
-                <div class="history-images">
-                  <img class="history-images__item" src="img/video-image-2.jpg" alt="Видео: карточка" />
-                  <img
-                    class="history-images__icon history-images__icon-2"
-                    src="img/icon-video-play-2.svg"
-                    alt="Иконка: проиграть видео"
-                  />
-                </div>
-              </a>
+              <div class="history-video-cover history-video__cover history-video__cover-2">
+                <a class="history-video__play" data-fancybox href="https://www.youtube.com/watch?v=oOStAc0dCHM">
+                  <div class="history-images history-images-2">
+                    <img
+                      class="history-images__item history-images__item-2"
+                      src="img/video-image-2.jpg"
+                      alt="Видео: карточка"
+                    />
+                    <img
+                      class="history-images__icon history-images__icon-2"
+                      src="img/icon-video-play-2.svg"
+                      alt="Иконка: проиграть видео"
+                    />
+                  </div>
+                </a>
+              </div>
               <div class="history-video__info">
                 <h3 class="history-video__title">Emelda Scandroot</h3>
                 <img class="history-video__icon" src="img/icon-label.svg" alt="Иконка: ярлык" />
@@ -547,16 +673,22 @@
               </div>
             </div>
             <div class="history-video history__video history__video-3">
-              <a class="history-video__play" data-fancybox href="https://www.youtube.com/watch?v=H1Jl-Z8W9Go">
-                <div class="history-images">
-                  <img class="history-images__item" src="img/video-image-3.jpg" alt="Видео: карточка" />
-                  <img
-                    class="history-images__icon history-images__icon-3"
-                    src="img/icon-video-play-2.svg"
-                    alt="Иконка: проиграть видео"
-                  />
-                </div>
-              </a>
+              <div class="history-video-cover history-video__cover history-video__cover-3">
+                <a class="history-video__play" data-fancybox href="https://www.youtube.com/watch?v=H1Jl-Z8W9Go">
+                  <div class="history-images history-images-3">
+                    <img
+                      class="history-images__item history-images__item-3"
+                      src="img/video-image-3.jpg"
+                      alt="Видео: карточка"
+                    />
+                    <img
+                      class="history-images__icon history-images__icon-3"
+                      src="img/icon-video-play-2.svg"
+                      alt="Иконка: проиграть видео"
+                    />
+                  </div>
+                </a>
+              </div>
               <div class="history-video__info">
                 <h3 class="history-video__title">Mar Rueda</h3>
                 <img class="history-video__icon" src="img/icon-label.svg" alt="Иконка: ярлык" />
@@ -564,16 +696,22 @@
               </div>
             </div>
             <div class="history-video history__video history__video-4">
-              <a class="history-video__play" data-fancybox href="https://www.youtube.com/watch?v=ysb2wqDZX78">
-                <div class="history-images">
-                  <img class="history-images__item" src="img/video-image-4.jpg" alt="Видео: карточка" />
-                  <img
-                    class="history-images__icon history-images__icon-4"
-                    src="img/icon-video-play-2.svg"
-                    alt="Иконка: проиграть видео"
-                  />
-                </div>
-              </a>
+              <div class="history-video-cover history-video__cover history-video__cover-4">
+                <a class="history-video__play" data-fancybox href="https://www.youtube.com/watch?v=ysb2wqDZX78">
+                  <div class="history-images history-images-4">
+                    <img
+                      class="history-images__item history-images__item-4"
+                      src="img/video-image-4.jpg"
+                      alt="Видео: карточка"
+                    />
+                    <img
+                      class="history-images__icon history-images__icon-4"
+                      src="img/icon-video-play-2.svg"
+                      alt="Иконка: проиграть видео"
+                    />
+                  </div>
+                </a>
+              </div>
               <div class="history-video__info">
                 <h3 class="history-video__title">Nembo Lukeni</h3>
                 <img class="history-video__icon" src="img/icon-label.svg" alt="Иконка: ярлык" />
@@ -589,12 +727,124 @@
     </section>
     <!-- /.history -->
     <section class="publishers">
-      <div class="publishers-wrapper"></div>
-      <!-- /.publishers-wrapper -->
+      <div class="container">
+        <div class="publishers-wrapper">
+          <h2 class="publishers-title publishers__title">Некоторые из издателей, с которыми мы сотрудничали</h2>
+          <div class="publishers-block publishers__block">
+            <img src="img/icon-slack.svg" alt="Icon: Slack" class="publishers-icon publishers__icon" />
+            <img src="img/icon-netflix.svg" alt="Icon: Netflix" class="publishers-icon publishers__icon" />
+            <img src="img/icon-fitbit.svg" alt="Icon: Fitbit" class="publishers-icon publishers__icon" />
+            <img src="img/icon-google-2.svg" alt="Icon: Google" class="publishers-icon publishers__icon" />
+            <img src="img/icon-airbnb.svg" alt="Icon: Airbnb" class="publishers-icon publishers__icon" />
+            <img src="img/icon-uber.svg" alt="Icon: Uber" class="publishers-icon publishers__icon" />
+            <img src="img/icon-netflix.svg" alt="Icon: Netflix" class="publishers-icon publishers__icon" />
+            <img src="img/icon-airbnb.svg" alt="Icon: Airbnb" class="publishers-icon publishers__icon" />
+            <img src="img/icon-slack.svg" alt="Icon: Slack" class="publishers-icon publishers__icon" />
+            <img src="img/icon-uber.svg" alt="Icon: Uber" class="publishers-icon publishers__icon" />
+            <img src="img/icon-fitbit.svg" alt="Icon: Fitbit" class="publishers-icon publishers__icon" />
+            <img src="img/icon-google-2.svg" alt="Icon: Google" class="publishers-icon publishers__icon" />
+          </div>
+          <!-- /.publishers-block -->
+        </div>
+        <!-- /.publishers-wrapper -->
+      </div>
+      <!-- /.container -->
     </section>
     <!-- /.publishers -->
-    <section class="blog"></section>
+    <section class="blog">
+      <div class="container">
+        <div class="blog-wrapper">
+          <div class="blog-title-wrapper">
+            <h2 class="blog-title blog__title">Ehya Блог</h2>
+            <div class="button navigation-button blog__navigation blog__navigation--desktop">
+              <div class="navigation-wrapper">
+                <a class="navigation-link blog__navigation-link" href="#">Все Блоги</a>
+              </div>
+            </div>
+          </div>
+          <!-- /.blog-title-wrapper -->
+          <div class="blog-items-wrapper">
+            <div class="blog-item blog__item blog__item-1">
+              <div class="blog-image blog-image-1">
+                <img src="img/blog-1.jpg" alt="Success Steps For Your Business Life" class="blog-item__image" />
+              </div>
+              <h3 class="blog-item__title blog-item__title-1">Success Steps For Your Business Life</h3>
+              <p class="blog-item__text">
+                This is the author story section. Every week we try to give you the story of book writer. Tell all of
+                you the behind the scene of their books.
+              </p>
+            </div>
+            <div class="blog-column">
+              <div class="blog-item blog__item blog__item-2">
+                <div class="blog-image blog-image-2">
+                  <img
+                    src="img/blog-2.jpg"
+                    alt="29 Motivational Quotes for Work Environments"
+                    class="blog-item__image"
+                  />
+                </div>
+                <div class="blog-info blog__info">
+                  <div class="blog-item__date">23 МАРТА 2020</div>
+                  <h3 class="blog-item__title blog-item__title-2">29 Motivational Quotes for Work Environments</h3>
+                  <a href="#" class="blog-item__link">ЧИТАТЬ</a>
+                </div>
+              </div>
+              <div class="blog-item blog__item blog__item-3">
+                <div class="blog-image blog-image-3">
+                  <img
+                    src="img/blog-3.jpg"
+                    alt="Learn To Love Growth and You Will Be A Success"
+                    class="blog-item__image"
+                  />
+                </div>
+                <div class="blog-info blog__info">
+                  <div class="blog-item__date">23 МАРТА 2020</div>
+                  <h3 class="blog-item__title blog-item__title-3">Learn To Love Growth and You Will Be A Success</h3>
+                  <a href="#" class="blog-item__link">ЧИТАТЬ</a>
+                </div>
+              </div>
+              <div class="blog-item blog__item blog__item-3">
+                <div class="blog-image blog-image-4">
+                  <img src="img/blog-4.jpg" alt="Motivation How To Build Trust at your Work" class="blog-item__image" />
+                </div>
+                <div class="blog-info blog__info">
+                  <div class="blog-item__date">23 МАРТА 2020</div>
+                  <h3 class="blog-item__title blog-item__title-4">Motivation How To Build Trust at your Work</h3>
+                  <a href="#" class="blog-item__link">ЧИТАТЬ</a>
+                </div>
+              </div>
+              <div class="button navigation-button blog__navigation blog__navigation--mobile">
+                <div class="navigation-wrapper">
+                  <a class="navigation-link blog__navigation-link" href="#">Все Блоги</a>
+                </div>
+              </div>
+            </div>
+            <!-- /.blog-column -->
+          </div>
+          <!-- /.blog-items-wrapper -->
+        </div>
+        <!-- /.blog-wrapper -->
+      </div>
+      <!-- /.container -->
+    </section>
     <!-- /.blog -->
+
+    <div class="container">
+      <section class="newsletter">
+        <div class="newsletter-wrapper">
+          <h2 class="newsletter-title newsletter__title">Будь первым, кто&nbsp;узнает <br />о наших акциях</h2>
+          <form action="subscribe.php" method="POST" class="form subscribe newsletter__subscribe">
+            <input type="email" class="subscribe__input" placeholder="Ваш Emaill" name="emailOnly" required />
+            <img class="newsletter-icon newsletter__icon" src="img/icon-mail.svg" alt="Иконка: письмо" />
+            <button class="button subscribe__button">Регистрация</button>
+          </form>
+        </div>
+        <!-- /.newsletter-wrapper -->
+      </section>
+      <!-- /.newsletter -->
+    </div>
+    <!-- /.container -->
+
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
@@ -602,7 +852,7 @@
             <a href="#" class="logo hover-opacity">
               <img class="logo__image footer__logo" src="img/logo.svg" alt="Логотип: Ehya" />
             </a>
-            <p class="footer-text footer__text">Создайте современный и креативный веб-сайт с crealand</p>
+            <p class="footer-text footer__text">Создайте современный и <br />креативный веб-сайт с crealand</p>
             <div class="footer__social-links">
               <a href="#" class="footer__link hover-opacity">
                 <img class="footer__social-img" src="img/icon-google.svg" alt="Иконка: google" />

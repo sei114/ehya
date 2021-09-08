@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ehya - Bookstore</title>
+    <!-- Фавикон -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- /Фавикон -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- rel="preload" as="font" -->
+    <!-- /Google Fonts -->
+    <!-- Normalize -->
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+    <!-- Swiperjs -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <!-- Aos plugin -->
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="navbar navbar--mobile--fixed">
+      <div class="container">
+        <div class="navbar-top">
+          <a href="#" class="logo hover-opacity">
+            <img class="logo__image navbar__logo" src="img/logo.svg" alt="Логотип: Ehya" />
+          </a>
+          <ul class="navbar-top-menu">
+            <li class="navbar-top-menu__item">
+              <a href="#" class="navbar-top-menu__link">Рекомендации</a>
+            </li>
+            <li class="navbar-top-menu__item ml-24">
+              <a href="#" class="navbar-top-menu__link">Книги</a>
+            </li>
+            <li class="navbar-top-menu__item ml-24">
+              <a href="#" class="navbar-top-menu__link">Блог</a>
+            </li>
+          </ul>
+          <!-- /.navbar-top-menu -->
+          <button
+            data-toggle="modal"
+            data-href="#bookstore-modal"
+            class="button navbar__button navbar__button--mobile--hidden"
+            type="button"
+          >
+            Получить
+          </button>
+          <button class="menu-button navbar-top__menu-button" type="button">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+          </button>
+        </div>
+        <!-- /.navbar-top -->
+      </div>
+      <!-- /.container -->
+      <div class="navbar-bottom">
+        <div class="container">
+          <ul class="navbar-bottom-menu">
+            <li class="navbar-bottom-menu__item">
+              <button
+                data-toggle="modal"
+                data-href="#bookstore-modal"
+                class="button navbar__button navbar__button--mobile--visible"
+                type="button"
+              >
+                Получить
+              </button>
+            </li>
+            <li class="navbar-bottom-menu__item">
+              <a href="#" class="navbar-bottom-menu__link">Рекомендации</a>
+            </li>
+            <li class="navbar-bottom-menu__item">
+              <a href="#" class="navbar-bottom-menu__link">Книги</a>
+            </li>
+            <li class="navbar-bottom-menu__item">
+              <a href="#" class="navbar-bottom-menu__link">Блог</a>
+            </li>
+          </ul>
+          <!-- /.navbar-bottom-menu -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.navbar-bottom -->
+    </header>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-wrapper">
+          <div class="hero-info">
+            <h2 class="hero-title hero__title">
+              <span class="hero-title__strong">Design Theory:</span><br />
+              The Psychology of <br />Graphic Design Pricing
+            </h2>
+            <h3 class="hero-subtitle hero__subtitle">КНИГА МИШЕЛЯ ЯНГА</h3>
+            <div class="hero-text hero__text">
+              Спустя 15 лет я управляю собственной студией, выполнив тысячи проектов для крупных клиентов. Теперь я
+              делюсь своими золотыми стратегиями ценообразования на творческую работу.
+            </div>
+            <div class="hero__button-wrapper">
+              <button data-toggle="modal" data-href="#bookstore-modal" class="button hero__button" type="button">
+                КУПИТЬ СЕЙЧАС
+              </button>
+              <div class="button navigation-button hero__navigation">
+                <div class="navigation-wrapper">
+                  <a class="navigation-link" href="#">ЧИТАТЬ ДЕМО</a>
+                </div>
+              </div>
+            </div>
+            <!-- /.hero__button-wrapper -->
+          </div>
+          <!-- /.hero-info -->
+          <div class="hero-book hero__book">
+            <div class="hero-book-wrapper">
+              <img class="hero-book__img" src="img/book-hero.jpg" alt="Книга Мишеля Янга" />
+            </div>
+            <!-- /.hero-book-wrapper -->
+          </div>
+          <!-- /.hero-book -->
+        </div>
+        <!-- /.hero-wrapper -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.hero -->
+
+    <section class="thanks">
+      <div class="container">
+        <div class="thanks-wrapper">
+          <h2 class="thanks-title thanks__title">Приветствуем!</h2>
+          <p class="thanks-text thanks__text">Ваше обращение будет рассмотрено в ближайшее время.</p>
+          <div class="button navigation-button thanks__navigation">
+            <div class="navigation-wrapper">
+              <a class="navigation-link" href="#">ГЛАВНАЯ</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.thanks-wrapper -->
+      </div>
+      <!-- /.container -->
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer__logo-icons">
+            <a href="#" class="logo hover-opacity">
+              <img class="logo__image footer__logo" src="img/logo.svg" alt="Логотип: Ehya" />
+            </a>
+            <p class="footer-text footer__text">Создайте современный и <br />креативный веб-сайт с crealand</p>
+            <div class="footer__social-links">
+              <a href="#" class="footer__link hover-opacity">
+                <img class="footer__social-img" src="img/icon-google.svg" alt="Иконка: google" />
+              </a>
+              <a href="#" class="footer__link hover-opacity">
+                <img class="footer__social-img" src="img/icon-twitter.svg" alt="Иконка: twitter" />
+              </a>
+              <a href="#" class="footer__link hover-opacity">
+                <img class="footer__social-img" src="img/icon-instagram.svg" alt="Иконка: instagram" />
+              </a>
+              <a href="#" class="footer__link hover-opacity">
+                <img class="footer__social-img" src="img/icon-linkedin.svg" alt="Иконка: linkedin" />
+              </a>
+            </div>
+            <!-- /.footer__social-links -->
+          </div>
+          <!-- /.logo-icons-wrapper -->
+          <div class="footer__list footer__product">
+            <h3 class="footer__title">Продукт</h3>
+            <ul class="footer__ul">
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Лэндинг</a></li>
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Функции</a></li>
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Документация</a></li>
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Скидки</a></li>
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Расценки</a></li>
+            </ul>
+          </div>
+          <!-- /.footer__list -->
+          <div class="footer__list footer__services">
+            <h3 class="footer__title">Сервисы</h3>
+            <ul class="footer__ul">
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Документация</a></li>
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Дизайн</a></li>
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Темы</a></li>
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Илюстрации</a></li>
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">UI Kit</a></li>
+            </ul>
+          </div>
+          <!-- /.footer__list -->
+          <div class="footer__list footer__company">
+            <h3 class="footer__title">Компания</h3>
+            <ul class="footer__ul">
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">О нас</a></li>
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Условия</a></li>
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Privacy Policy</a></li>
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Careers</a></li>
+            </ul>
+          </div>
+          <!-- /.footer__list -->
+          <div class="footer__list footer__other">
+            <h3 class="footer__title">Еще..</h3>
+            <ul class="footer__ul">
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Документация</a></li>
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Лицензия</a></li>
+              <li class="footer__item hover-primary"><a href="#" class="footer__link">Изменения</a></li>
+            </ul>
+          </div>
+          <!-- /.footer__list -->
+        </div>
+        <!-- /.footer-wrapper -->
+        <div class="footer-copyright footer__copyright">
+          <a href="#" class="footer__link hover-opacity">
+            <img class="footer__icon" src="img/icon-heart.svg" alt="Иконка: сердце" />
+          </a>
+          <div class="footer-copyright__text">Copyright &copy; 2019. Crafted with love.</div>
+        </div>
+        <!-- /.footer-copyright -->
+      </div>
+      <!-- /.container -->
+    </footer>
+    <div class="modal" id="bookstore-modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <a href="#" class="modal__close">
+          <img src="img/close.svg" alt="Иконка: закрыть" />
+        </a>
+        <h3 class="modal__title">Обратная связь</h3>
+        <form action="send.php" method="POST" class="form modal__form">
+          <input type="text" class="input modal__input" placeholder="Ваше имя*" name="name" required minlength="2" />
+          <input
+            type="tel"
+            class="input modal__input phone-rus"
+            placeholder="Номер телефона*"
+            name="phone"
+            required
+            minlength="16"
+            data-mask="+7(999)999-99-99"
+            data-mask-clearifnotmatch="true"
+            data-mask-selectonfocus="true"
+          />
+          <input type="email" class="input modal__input" placeholder="Электронная почта*" name="email" required />
+          <textarea class="textarea message modal__message" placeholder="Сообщение" name="message"></textarea>
+          <button class="button button--160-50 modal__button" type="submit">Отправить</button>
+          <span class="modal__info">* Обязательно</span>
+        </form>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- jQuery (https://jquery.com/) -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- Слайдер Swiperjs (https://swiperjs.com/) -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- jQuery Validation plugin (https://jqueryvalidation.org/) -->
+    <script src="js/jquery.validate.min.js"></script>
+    <!-- jQuery Mask Plugin (https://igorescobar.github.io/jQuery-Mask-Plugin/) -->
+    <script src="js/jquery.mask.min.js"></script>
+    <!-- Aos plugin (https://michalsnik.github.io/aos/) -->
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

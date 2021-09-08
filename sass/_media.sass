@@ -1,7 +1,7 @@
 /* medium desktop */
 @media (max-width: 1240px)
   .container,
-  .reviews-slider__buttons
+  .reviews__buttons
     max-width: 960px
   .hero
     &__button
@@ -33,13 +33,37 @@
       &__item
         width: 220px
         min-height: 296px
-      &__buttons
-        top: -220px
+    &__buttons
+      top: -220px
+  .unpublished
+    &__buttons
+      top: -440px
+      right: -413px
   .history
     &__container
       max-width: 860px
     &__video
       width: 268px
+      &-1
+        width: 100%
+  .blog
+    &__item
+      &-1
+        flex-basis: 40%
+    &-column
+      flex-basis: 57%
+    &__info
+      width: 270px
+    &-image
+      &-2, &-3, &-4
+        width: 255px
+        // height: 150px
+      &-1
+        width: 390px
+        // height: 330px
+  .newsletter
+    &__title
+      margin-right: 20px
   .footer
     &-wrapper
       justify-content: space-between
@@ -49,8 +73,14 @@
     &__list
       width: 150px
       margin-left: 0
-  body
-    background-color: #f0deb9
+  .publishers
+    &__icon
+      &:nth-last-child(1)
+        display: none
+      &:first-child
+        display: none
+  // body
+  //   background-color: #ece8de
 
 /* small desktop */
 @media (max-width: 1060px)
@@ -180,29 +210,40 @@
       &__text
         font-size: 16px
         line-height: 22px
-      &__buttons
-        position: static
-        display: flex
-        justify-content: space-between
-        width: 160px
-        margin-top: 38px
-        // border: 1px solid red
-      &__button
-        position: static
-        transform: none
-        &--prev
-          position: relative
-          top: 0
-          left: 10px
-        &--next
-          position: relative
-          top: 0
-          right: 10px
+    &__buttons
+      position: static
+      display: flex
+      justify-content: space-between
+      width: 160px
+      margin-top: 38px
+      // border: 1px solid red
+    &__button
+      position: static
+      transform: none
+      &--prev
+        position: relative
+        top: 0
+        left: 10px
+      &--next
+        position: relative
+        top: 0
+        right: 10px
+  .unpublished
+    &__buttons
+      top: -432px
+      right: -302px
+      width: 114px
+      height: 48px
+    &__button
+      width: 48px
+      height: 50px
   .history
     &__container
       max-width: 622px
     &__video
       width: 298px
+      &-1
+        width: 100%
       &:last-child
         display: none
     &-text
@@ -219,6 +260,60 @@
       margin: 24px 0 0
       font-size: 18px
       line-height: 25px
+  .blog
+    &-items
+      &-wrapper
+        flex-direction: column
+    &-column
+      flex-basis: auto
+    &__item
+      &-1
+        flex-basis: auto
+        margin-bottom: 30px
+    &-item
+      &__title
+        &-1
+          margin: 20px 0 10px
+          text-align: center
+      &__text
+        text-align: center
+      &__link
+        &:hover
+          color: $blue-secondary
+    &-image
+      border-radius: 10px
+      &-1
+        width: 100%
+        height: 420px
+      &-2, &-3, &-4
+        width: 50%
+        height: 200px
+    &__info
+      width: 47%
+  .newsletter
+    padding: 26px 24px 28px
+    &-wrapper
+      display: flex
+      flex-direction: column
+    &__title
+      font-size: 28px
+      line-height: 36px
+    &__subscribe
+      margin-top: 32px
+  .subscribe
+    width: 272px
+    height: 112px
+    position: relative
+    &__input
+      padding-bottom: 73px
+      padding-top: 17px
+    &__button
+      width: 250px
+      height: 42px
+      margin-bottom: 12px
+      position: absolute
+      top: 60px
+      left: 98px
   .footer
     padding-bottom: 0
     &-wrapper
@@ -243,8 +338,18 @@
       line-height: 20px
     &__copyright
       display: none
-  body
-    background-color: #1ab9ac
+    &__text
+      margin-top: 16px
+      text-align: center
+    &__social
+      &-links
+        margin-top: 16px
+  .publishers
+    &__icon
+      &:nth-last-child(2)
+        display: none
+  // body
+  //   background-color: #c5dddb
 
 /* tablet */
 @media (max-width: 768px)
@@ -372,25 +477,31 @@
       &__text
         font-size: 12px
         line-height: 20px
-      &__buttons
-        width: 160px
-        margin-top: 38px
-        // border: 1px solid red
-      &__button
-        width: 68px
-        height: 68px
-        &--prev
-          position: relative
-          top: 0
-          left: 20px
-        &--next
-          position: relative
-          top: 0
-          right: 20px
+    &__buttons
+      width: 160px
+      margin-top: 38px
+      // border: 1px solid red
+    &__button
+      width: 68px
+      height: 68px
+      &--prev
+        position: relative
+        top: 0
+        left: 20px
+      &--next
+        position: relative
+        top: 0
+        right: 20px
+  .unpublished
+    &__buttons
+      top: -432px
+      right: -200px
   .history
     &__video
       width: 48%
       margin-top: 20px
+      &-1
+        width: 100%
     &__title
       font-size: 32px
       line-height: 40px
@@ -414,8 +525,44 @@
         width: 21px
         &-1
           width: 56px
-  body
-    background-color: #92cf76
+  .blog
+    &-item
+      &__title
+        &-1
+          font-size: 16px
+          line-height: 20px
+        &-2, &-3, &-4
+          font-family: 'Roboto', sans-serif
+          font-size: 14px
+          font-weight: 500
+          line-height: 20px
+      &__text
+        font-size: 12px
+        line-height: 24px
+      &__date
+        font-size: 10px
+        line-height: 20px
+      &__link
+        font-size: 10px
+        line-height: 20px
+    &__title
+      font-size: 32px
+      line-height: 40px
+    &__navigation
+      &--desktop
+        display: none
+      &--mobile
+        display: block
+        margin: 36px auto 0
+    &-title
+      &-wrapper
+          justify-content: center
+          margin-bottom: 24px
+  .publishers
+    &__icon
+      width: 171px
+  // body
+  //   background-color: #cfe6c5
 
 /* smartphone */
 @media (max-width: 576px)
@@ -516,30 +663,102 @@
     &__nav
       &-button
         height: 60px
+  .unpublished
+    padding: 48px 0
+    &__title
+      text-align: center
+      font-size: 28px
+      line-height: 36px
+    &-slider
+      &__item
+        margin: auto
+    &__buttons
+      position: static
+      display: flex
+      justify-content: space-between
+      width: 114px
+      margin-top: 38px
+      // border: 1px solid red
+    &__button
+      position: static
+      transform: none
   .history
     &__title
       font-size: 28px
       line-height: 36px
     &__text
       margin: 24px 0 0
+      text-align: center
     &__video
       margin-top: 20px
       &:first-child
         margin-top: 35px
     &-video
+      &__cover
+        height: 138px
+        &-1
+          height: 210px
       &__info
         flex-direction: column
         align-items: center
       &__text
         margin-top: 6px
       &__icon
+        width: 10px
         margin-top: 16px
         order: 10
+  .subscribe
+    min-width: 200px
+    width: 100%
+    &__button
+      position: static
+      margin-top: 58px
+      z-index: 11
+    &__input
+      padding: 11px 11px 62px 48px
+  .newsletter
+    padding: 26px 24px 28px
+    &__subscribe
+      display: flex
+      justify-content: center
+      margin: auto
+      width: 100%
+      min-width: 100px
+    &__title
+      margin-left: 0
+      margin-bottom: 32px
+      text-align: left
+    &__icon
+      top: -27px
+      margin-right: 20px
   .footer
     &__list
       width: 48%
-  body
-    background-color: #94bff3
+  .publishers
+    &__icon
+      width: 132px
+      &:nth-last-child(5)
+        display: none
+    &-wrapper
+      padding-top: 37px
+      padding-bottom: 56px
+  .blog
+    &-image
+      &-1
+        height: 260px
+    &-wrapper
+      padding: 56px 0 48px
+    &-item
+      &__title
+        &-2, &-3, &-4
+          margin-top: 6px
+      &__link
+        margin-top: 6px
+    &__title
+      font-size: 28px
+      line-height: 36px
+  // body
+  //   background-color: #c7d2e0
 
 /* mobile */
 @media (max-width: 320px)
@@ -585,5 +804,23 @@
     &-slider
       &__item
         width: 46%
-  body
-    background-color: #6a9755
+  .blog
+    &-image
+      &-1
+        height: 120px
+      &-2, &-3, &-4
+        width: 90px
+        height: 90px
+    &__info
+      width: 60%
+    &-item
+      &__title
+        &-1
+          text-align: left
+      &__text
+        margin-left: 0
+        text-align: left
+  .history
+    padding: 44px 0 42px 0
+  // body
+  //   background-color: #bccab5
