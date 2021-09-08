@@ -1,5 +1,5 @@
 .reviews
-  display: none
+  // display: none
   padding: 39px 0 0 0
   &__hr
     width: 100%
@@ -8,19 +8,13 @@
     border: none
     background-color: $grey
   &-slide
-    &-wrapper
+    &-cover
+      display: flex
+  &-slider
+    &__item
       display: flex
       flex-direction: column
       align-items: center
-  &-slider
-    // overflow: visible
-    &--mobile
-      display: none
-    &-wrapper
-      display: flex
-      &--mobile
-        display: none
-    &__item
       width: 265px
       min-height: 242px
       margin: 60px auto 0
@@ -29,7 +23,7 @@
       border-radius: 10px
     &__image
       width: 64px
-      height: 64px
+      // height: 64px
     &__title
       margin-top: 40px
       margin-bottom: 12px
@@ -74,10 +68,10 @@
         left: 0
         transform: translateX(-50%)
         &--hidden
-          display: none
+          opacity: 0
       &--next
         background-image: url(../img/arrow-next-primary.svg)
         right: 0
         transform: translateX(50%)
         &--hidden
-          display: none
+          opacity: 0

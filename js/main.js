@@ -1,7 +1,7 @@
 $(document).ready(function () {
   /* Слайдер Swiperjs */
 
-  const reviewsSliderDesk = new Swiper(".reviews-slider--desktop", {
+  const reviewsSlider = new Swiper(".reviews-slider", {
     // Optional parameters
     // loop: true,
 
@@ -12,29 +12,35 @@ $(document).ready(function () {
     },
 
     // Мои параметры
+    // effect: "fade",
     speed: 800,
+    slidesPerView: 1,
+    spaceBetween: 20,
     autoHeight: true,
-    spaceBetween: 26,
     watchOverflow: true,
-    slidesPerView: 4,
-  });
 
-  const reviewsSliderMob = new Swiper(".reviews-slider--mobile", {
-    // Optional parameters
-    // loop: true,
-
-    // Navigation arrows
-    navigation: {
-      nextEl: ".reviews-slider__button--next",
-      prevEl: ".reviews-slider__button--prev",
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      // when window width is >= 576px
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      // when window width is >= 1060px
+      1060: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
     },
-
-    // Мои параметры
-    speed: 800,
-    autoHeight: true,
-    spaceBetween: 26,
-    watchOverflow: true,
-    slidesPerView: 4,
   });
 
   /* Слайдер Swiperjs. Делаем кнопки выходящими за пределы контейнера */
@@ -54,29 +60,21 @@ $(document).ready(function () {
   // reachBeginning - событие достижения начала слайдера
   // fromEdge - событие после достижения начала или конца слайдера
 
-  // swiperNext.addEventListener("Swiper.reachEnd()", () => {
-  //   console.log("Конец слайдера!");
-  // });
-
-  // Swiper.reachEnd(function () {
-  //   $(".reviews-slider__button--next").addClass("reviews-slider__button--next--hidden");
-  // });
+  reviewsSlider.on("reachEnd", function () {
+    // console.log("Конец слайдера");
+    $(".reviews-slider__button--next").addClass("reviews-slider__button--next--hidden");
+  });
+  reviewsSlider.on("reachBeginning", function () {
+    // console.log("Начало слайдера");
+    $(".reviews-slider__button--prev").addClass("reviews-slider__button--prev--hidden");
+  });
+  reviewsSlider.on("fromEdge", function () {
+    // console.log("Возврат из конечного положения слайдера");
+    $(".reviews-slider__button--next").removeClass("reviews-slider__button--next--hidden");
+    $(".reviews-slider__button--prev").removeClass("reviews-slider__button--prev--hidden");
+  });
 
   /* /Слайдер Swiperjs. Делаем кнопки исчезающими при достижении конца слайдера */
-
-  /* Слайдер Swiperjs. Делаем мобильный вариант слайдера рабочим */
-  // function ReviewsSliderDesktop() {
-  //   $(".reviews-slider").removeClass("reviews-slider--desktop");
-  // }
-  // function ReviewsSliderMobile() {
-  //   $(".reviews-slider").addClass("reviews-slider--mobile");
-  // }
-
-  // if (window.matchMedia("(max-width: 1060px)").matches) {
-  //   ReviewsSliderDesktop();
-  //   ReviewsSliderMobile();
-  // }
-  /* /Слайдер Swiperjs. Делаем мобильный вариант слайдера рабочим */
   /* /Слайдер Swiperjs */
 
   /* Мобильное меню на JS */
